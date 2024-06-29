@@ -20,13 +20,19 @@ body, html {
 }
 
 .arkh {
-    border-bottom: 3px solid gold;
+    border-bottom: 2px solid gold;
+    background-color: black;
+}
+
+.arkh a {
+    color: gold;
+    font-weight: 600;
 }
 
 .intro {
     background-color: black;
-    margin-top: 2px;
-    border-top: 3px solid gold;
+    margin-top: 5px;
+    border-top: 2px solid gold;
 }
 
 .intro p {
@@ -36,12 +42,16 @@ body, html {
 main {
     max-width: 100%;
     max-height: auto;
+
+    background-color: black;
+    color: whitesmoke;
 }
 
 .map {
     max-width: 60%;
     margin: 0 auto; /* Isso centraliza a div horizontalmente */
-    border: 1px solid #ccc; /* Apenas para visualização */
+    border: 2px solid #ddbb00; /* Apenas para visualização */
+    background-color: #b19500;
     padding: 20px; /* Apenas para visualização */
   }
 
