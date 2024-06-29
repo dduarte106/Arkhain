@@ -19,17 +19,23 @@ body, html {
     min-height: 100vh; /* Garante que o corpo da página tenha pelo menos a altura da tela */
 }
 
+.arkh {
+    border-bottom: 3px solid gold;
+}
+
+.intro {
+    background-color: black;
+    margin-top: 2px;
+    border-top: 3px solid gold;
+}
+
+.intro p {
+    color: whitesmoke;
+}
+
 main {
     max-width: 100%;
     max-height: auto;
-}
-
-div.map {
-    max-width: 60%;
-}
-
-div.map img {
-    text-align: center;
 }
 
 .map {
