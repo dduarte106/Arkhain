@@ -65,7 +65,9 @@
     </div>
     <br>
     <div class="map">
-        <img src="img/mapa_bt01.jpg" class="img-fluid" alt="mapa_beta01">
+        <!-- <img src="img/mapa_bt01.jpg" class="img-fluid" alt="mapa_beta01"> -->
+        <img src="img/mapa_bt01.jpg" class="img-fluid" alt="mapa_beta01" data-bs-toggle="modal" data-bs-target="#mapModal">
+
     </div>
     <br>
     <div class="cdds">
@@ -212,7 +214,7 @@
     </div>
 </main>
 
-<script>
+<!-- <script>
     let lastScrollTop = 0;
     const scrollNav = document.getElementById('scrollNav');
 
@@ -229,6 +231,40 @@
         }
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
     }, false);
+</script> -->
+
+<!-- Modal -->
+<div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mapModalLabel">Mapa Ampliado</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <img src="img/mapa_bt01.jpg" class="img-fluid" alt="mapa_beta01">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var scrollNav = document.getElementById("scrollNav");
+        var prevScrollpos = window.pageYOffset;
+        
+        window.addEventListener("scroll", function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                scrollNav.classList.add("shown");
+                scrollNav.classList.remove("hidden");
+            } else {
+                scrollNav.classList.add("hidden");
+                scrollNav.classList.remove("shown");
+            }
+            prevScrollpos = currentScrollPos;
+        });
+    });
 </script>
 
 </body>
