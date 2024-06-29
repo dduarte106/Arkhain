@@ -66,3 +66,28 @@ main {
     display: flex;
     gap: 7pc;
   }
+
+
+  /* Media queries para iPhone 13 */
+@media screen and (max-width: 390px) {
+    .intro p {
+        padding: 10px; /* Reduz o padding para melhor visualização em telas menores */
+    }
+    .map {
+        max-width: 100%;
+        padding: 10px; /* Reduz o padding para melhor visualização em telas menores */
+    }
+    .cdds {
+        display: block; /* Muda para layout de coluna em vez de fila para melhor se adaptar à tela pequena */
+        gap: 1em;
+    }
+    .cdds div {
+        margin-bottom: 20px; /* Adiciona espaço entre os itens da lista para melhor visualização */
+    }
+    .arkh a {
+        font-size: 0.9em; /* Ajusta o tamanho da fonte para se adequar à tela menor */
+    }
+    .intro {
+        margin-top: 10px; /* Ajusta a margem superior para telas menores */
+    }
+}
