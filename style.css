@@ -83,6 +83,11 @@ main {
 
   /* Media queries para iPhone 13 */
   @media (max-width: 768px) {
+    .arkh {
+        max-width: 100%; /* ou outro valor que desejar para telas menores */
+        width: 100%;
+    }
+
     .navbar-brand {
         font-size: 1.2rem;
     }
