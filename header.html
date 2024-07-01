@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header com Subnavbars Recolhíveis</title>
+
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#main-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #333;
+    z-index: 1000; /* Para garantir que fique acima do conteúdo */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 1.2em;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.sub-navbar {
+    display: none;
+    background-color: #555;
+}
+
+.sub-navbar.active {
+    display: flex;
+}
+
+.sub-navbar.top {
+    top: 50px;
+}
+
+.sub-navbar.bottom {
+    top: 100px;
+}
+
+.content {
+    margin-top: 150px; /* Ajuste para o conteúdo não ficar oculto sob o header */
+    padding: 20px;
+    background-color: #f0f0f0;
+    min-height: 2000px; /* Apenas para rolar a página no exemplo */
+}
+
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <nav class="navbar main-navbar">
+            <div class="navbar-brand">ARKHAIN</div>
+        </nav>
+        <nav class="navbar sub-navbar top">
+            <div class="navbar-brand">Subnavbar 1</div>
+        </nav>
+        <nav class="navbar sub-navbar bottom">
+            <div class="navbar-brand">Subnavbar 2</div>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- Seu conteúdo aqui -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet varius turpis. Donec et vehicula sem. Quisque vitae ultrices velit. Vestibulum congue magna ut ex rhoncus, id tincidunt tellus fermentum. Sed in dolor nisl. Integer tempus justo et eros gravida vehicula.</p>
+    </div>
+
+    <script>
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                // Scroll para baixo
+                document.getElementById("main-header").classList.add("hide");
+            } else {
+                // Scroll para cima
+                document.getElementById("main-header").classList.remove("hide");
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+
+    </script>
+</body>
+</html>
