@@ -6,56 +6,57 @@
     <title>Header com Subnavbars Recolhíveis</title>
 
     <style>
-        body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
 
-#main-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: #333;
-    z-index: 1000; /* Para garantir que fique acima do conteúdo */
-}
+    #main-header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: #333;
+        z-index: 1000; /* Para garantir que fique acima do conteúdo */
+    }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-}
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+    }
 
-.navbar-brand {
-    color: rgb(255, 0, 0);
-    font-size: 1.2em;
-    padding: 0 20px;
-    cursor: pointer;
-}
+    .navbar-brand {
+        color: white;
+        font-size: 1.2em;
+        padding: 0 20px;
+        cursor: pointer;
+    }
 
-.sub-navbar {
-    display: none;
-    background-color: #555;
-}
+    .sub-navbar {
+        display: none;
+        background-color: #555;
+    }
 
-.sub-navbar.active {
-    display: flex;
-}
+    .sub-navbar.active {
+        display: flex;
+    }
 
-.sub-navbar.top {
-    top: 50px;
-}
+    .sub-navbar.top {
+        top: 50px;
+    }
 
-.sub-navbar.bottom {
-    top: 100px;
-}
+    .sub-navbar.bottom {
+        top: 100px;
+    }
 
-.content {
-    margin-top: 150px; /* Ajuste para o conteúdo não ficar oculto sob o header */
-    padding: 20px;
-    background-color: #31c55d;
-    min-height: 2000px; /* Apenas para rolar a página no exemplo */
-}
+    .content {
+        margin-top: 150px; /* Ajuste para o conteúdo não ficar oculto sob o header */
+        padding: 20px;
+        background-color: #f0f0f0;
+        min-height: 2000px; /* Apenas para rolar a página no exemplo */
+    }
+
 
     </style>
 </head>
@@ -69,6 +70,12 @@
         </nav>
         <nav class="navbar sub-navbar bottom">
             <div class="navbar-brand">Subnavbar 2</div>
+        </nav>
+        <nav class="navbar main-navbar">
+            <div class="navbar-brand">CIDADES</div>
+        </nav>
+        <nav class="navbar main-navbar">
+            <div class="navbar-brand">PERSONAGENS</div>
         </nav>
     </header>
 
@@ -92,6 +99,7 @@
             }
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         });
+
 
     </script>
 </body>
