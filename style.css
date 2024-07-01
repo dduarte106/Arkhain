@@ -105,3 +105,10 @@ main {
         width: 100px;
     }
 }
+
+@media (max-width: 576px) {
+    .arkh {
+        max-width: 100%; /* ou outro valor que desejar para telas menores que 576px */
+        width: 100%;
+    }
+}
